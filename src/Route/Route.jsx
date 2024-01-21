@@ -1,34 +1,37 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
-import Home from "../Componets/Home/Home";
-import Registration from "../Componets/Registration/Registration";
-import Login from "../Componets/Login/Login";
-import PrivetRoute from "./PrivetRoute";
-import About from "../Componets/About/About";
+import Home from "../components/Home/Home";
+import Registration from "../components/Registration/Registration";
+import Login from "../components/Login/Login";
+// import Product from "../components/Product/Product";
 
+export const route = createBrowserRouter([
 
-export const router= createBrowserRouter([
-          {
-                    path:'/',
-                    element:<Main></Main>,
-                    children:[
-                              {
-                                 path:'/',
-                                 element:<PrivetRoute> <Home></Home> </PrivetRoute>       
-                              },
-                              {
-                                 path:'/about',
-                                 element:<PrivetRoute> <About></About> </PrivetRoute>       
-                              },
-                              {
-                                        path:'/register',
-                                        element:<Registration><About></About></Registration>
-                              },
-                              {
-                                        path:'/login',
-                                        element:<Login></Login>
-                              },
-                             
-                    ]
-          }
-]);
+    {
+        path: '/',
+        element: <Main></Main>,
+        children:[
+            {
+                path: '/',
+                element:<Home></Home>
+            },
+            
+            {
+                path: '/register',
+                element:<Registration></Registration>
+            },
+            {
+                path: '/login',
+                element:<Login></Login>
+            },
+           /*   {
+                 path: '/product',
+                 element:<Product></Product>
+             } */
+
+        ]
+
+    }
+
+    
+])

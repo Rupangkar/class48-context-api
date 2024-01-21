@@ -7,7 +7,7 @@ import UserContext from './Context/UserContext.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserContext>
-    <App />
+      <App />
     </UserContext>
   </React.StrictMode>,
 )
